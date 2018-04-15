@@ -1,0 +1,13 @@
+<% include partials/header.ejs %>
+
+<div>
+    <form method="post" action="/blogs">
+        <input type="text" name="blog[title]"> </input>
+        <input type="text" name="blog[image]"></input>
+        <textarea name="blog[body]"></textarea>
+        <input type="submit"></input>
+    </form>
+    <a href="/blogs">Go back</a>
+</div>
+
+<% include partials/footer.ejs %>

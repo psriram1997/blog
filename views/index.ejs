@@ -1,0 +1,15 @@
+<% include partials/header.ejs %>
+
+<h1>BLOG POSTS</h1>
+<a href="/blogs/new">new post</a>
+<% blogs.forEach(function(blog){ %>
+    <div>
+        <h2> <%= blog.title %></h2>
+        <img src="<%= blog.image %>"></img>
+        <span><%= blog.created.toDateString() %></span>
+        <p><%= blog.body.substring(0,100)+"....." %></p>
+        <a href="/blogs/<%= blog._id %>">view more</a>
+    </div>
+<% }) %>
+
+<% include partials/footer.ejs %>

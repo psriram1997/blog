@@ -1,0 +1,16 @@
+<% include partials/header.ejs %>
+
+<h1><%= blog.title %></h1>
+<figure>
+    <img src="<%= blog.image %>"></img>
+    <figcaption><%= blog.created.toDateString() %></figcaption>
+</figure>
+<p><%= blog.body %></p>
+    <a href="/blogs">Go back</a>
+    <a href="/blogs/<%= blog._id%>/edit">edit post</a>
+<form method="post" action="/blogs/<%= blog._id %>?_method=delete">
+    <button>delete post</button>
+</form>
+
+
+<% include partials/footer.ejs %>
