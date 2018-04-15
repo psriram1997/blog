@@ -3,6 +3,7 @@ var express = require("express") ,
     mongoose = require("mongoose"),
     bodyParser = require("body-parser"),
     methodOverride=require("method-override");
+var port = process.env.PORT //3000;
 
 mongoose.connect("mongodb://localhost/blog_app");
  app.use(bodyParser.urlencoded({extended:true}));
@@ -127,6 +128,6 @@ app.delete("/blogs/:id",function(req,res){
 });
 
 
-app.listen(process.env.PORT,process.env.IP,function(){
+app.listen(port,function(){
    console.log("blogs app is on live"); 
 });
